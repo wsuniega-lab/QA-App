@@ -23,6 +23,16 @@ Built with Expo (React Native) for iPhone and Android.
 - **PDF report** with piece info, a pass/fail summary, every check with notes, photos with captions and timestamps, and the signature. It opens the share sheet so you can email it, save it to Files or Drive, or print it.
 - **Works with no signal.** In this trial version everything is stored on the phone.
 
+## Get the app on an Android phone
+
+Every push builds a fresh APK on GitHub (see `.github/workflows/android-apk.yml`).
+
+1. On the phone, open **https://github.com/wsuniega-lab/QA-App/releases/latest** and sign in to GitHub if asked.
+2. Under **Assets**, tap **PrecastQA.apk** to download it.
+3. Open the downloaded file and tap **Install**. Android asks once to allow installs from Chrome; allow it.
+
+To update later, download the newest release and install it over the old one. Your inspections are kept.
+
 ## Try it on your phone
 
 You need a computer with [Node.js](https://nodejs.org) (LTS) and the **Expo Go** app on your phone (App Store / Google Play).
