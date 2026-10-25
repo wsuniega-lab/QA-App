@@ -34,17 +34,23 @@ npx expo start
 
 Scan the QR code with the phone camera (iPhone) or the Expo Go app (Android). The phone and computer must be on the same Wi-Fi; if they aren't, run `npx expo start --tunnel`.
 
-### Install it as a real app (no computer needed afterward)
+### Install it as a real app on Android (no computer needed afterward)
 
-Use [EAS Build](https://docs.expo.dev/build/introduction/) (free Expo account):
+[EAS Build](https://docs.expo.dev/build/introduction/) builds an installable `.apk` in the cloud. You need a free account at [expo.dev](https://expo.dev).
 
 ```bash
 npx eas-cli@latest login
-npx eas-cli@latest build:configure
-npx eas-cli@latest build --platform android --profile preview   # gives you an .apk to install
+npm run build:apk
 ```
 
-For iPhone you need an Apple Developer account. Build with `--platform ios` and distribute through TestFlight.
+The first run asks to create the Expo project; answer **Yes**. If it asks about an Android keystore, also answer **Yes** so EAS generates one.
+
+When the build finishes (about 10–20 minutes) you get a link and a QR code:
+
+1. Open the link on your phone and download the `.apk`.
+2. Tap it to install. Android asks once to allow installs from your browser; allow it.
+
+For iPhone you need an Apple Developer account. Build with `npx eas-cli@latest build --platform ios` and distribute through TestFlight.
 
 ## Trial storage → cloud later
 
